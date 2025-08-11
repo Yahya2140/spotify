@@ -272,3 +272,145 @@
 .tracks-section::-webkit-scrollbar-thumb:hover {
   background: #1ed760;
 }
+
+/* Onglets */
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.tab-buttons button {
+  padding: 8px 16px;
+  border: 2px solid #1db954;
+  background: transparent;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-buttons button.active {
+  background: #1db954;
+  color: white;
+}
+
+.tab-buttons button:hover:not(.active) {
+  background: rgba(29, 185, 84, 0.2);
+}
+
+/* Beat Analyzer */
+.beat-analyzer {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.upload-section {
+  border: 2px dashed #1db954;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.file-input {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.audio-player {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* Analyse intégrée */
+.integrated-analysis {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.metrics-comparison {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.metric-item {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.metric-item h4 {
+  color: #1db954;
+  margin-bottom: 10px;
+}
+
+.values {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.spotify-value .value {
+  color: #1db954;
+  font-weight: bold;
+}
+
+.local-value .value {
+  color: #8884d8;
+  font-weight: bold;
+}
+
+.difference .value {
+  color: #f39c12;
+  font-weight: bold;
+}
+
+.comparison-chart {
+  margin: 30px 0;
+}
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.analysis-item {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.analysis-item h5 {
+  color: #1db954;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .content-container {
+    grid-template-columns: 1fr;
+  }
+}
